@@ -17,17 +17,27 @@ html {
     outline: none;
 }
 
-.section
-{
-    display: flex;
-    align-items: center;
+.content_container {
+    width: 100vh;
     height: 100vh;
-    position: relative;
-    font-family: 'Cabin', sans-serif;
-    color: #ffeded;
-    text-transform: uppercase;
-    font-size: 7vmin;
-    padding-left: 10%;
-    padding-right: 10%;
+    position: absolute;
 }
 
+.button {
+    color: white;
+    background-color: green;
+    z-index: 2;
+    margin: 1em 0 0 1em;
+}
+
+.header_container {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    margin: 1em 0 0 1em;
+}
+
+
+h1 {
+    color: white;
+}
