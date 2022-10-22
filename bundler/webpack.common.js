@@ -4,7 +4,7 @@ const MiniCSSExtractPlugin = require('mini-css-extract-plugin')
 const path = require('path')
 
 module.exports = {
-    entry: path.resolve(__dirname, '../src/parentScene.js'),
+    entry: path.resolve(__dirname, '../src/CurrentScene.js'),
     output:
     {
         hashFunction: 'xxhash64',
@@ -76,7 +76,26 @@ module.exports = {
                 {
                     filename: 'assets/fonts/[hash][ext]'
                 }
-            }
+            },
+            
+            //Tsx
+            {
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
+            },
         ]
-    }
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
+    },
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+    },
+      devServer: {
+        static: path.join(__dirname, "dist"),
+        compress: true,
+        port: 4000,
+    },
 }

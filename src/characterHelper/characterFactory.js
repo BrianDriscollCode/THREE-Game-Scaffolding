@@ -9,8 +9,8 @@ function characterFactory() {
         })
 
         const character = new THREE.Mesh(boxGeometry, material)
-        scene.add(character)
         character.position.z += 3
+        return character
     }
 
     return { createCharacter }

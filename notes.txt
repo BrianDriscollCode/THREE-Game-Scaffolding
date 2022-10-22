@@ -1,0 +1,1 @@
+// "build": "webpack --config ./bundler/webpack.prod.js", - tsconfig
